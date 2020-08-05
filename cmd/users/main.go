@@ -3,19 +3,19 @@ package main
 import(
 	"fmt"
 	"github.com/golang-architechture"
+	"github.com/golang-architechture/storage/mongo"
 	
-
 ) 
 
 func main() {
-	storage := mongo{}
-	p1 := Person{first: "Daniel"}
-	p2 := Person{first: "Vaishali"}
+	storage := mongo.Db{}
+	p1 := architecture.Person{First: "Daniel"}
+	p2 := architecture.Person{First: "Vaishali"}
+	
+	architecture.Put(storage,0,p1)
+	architecture.Put(storage, 1, p2)
 
-	put(storage, 0, p1)
-	put(storage, 1, p2)
-
-	fmt.Println(get(storage, 0))
-	fmt.Println(get(storage, 1))
+	fmt.Println(architecture.Get(storage, 0))
+	fmt.Println(architecture.Get(storage, 1))
 
 }

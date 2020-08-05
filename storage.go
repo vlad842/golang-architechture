@@ -1,6 +1,6 @@
 package architecture
 
-//Db interface
+//Db interface- accessor to access saved users
 type Db interface {
 	Save(p Person, n int)
 	Retrieve(n int) Person
