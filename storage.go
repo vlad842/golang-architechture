@@ -16,9 +16,9 @@ type Person struct {
 }
 
 //Get Person from db
-func Get(d Db, n int) Person {
+func Get(db Db, n int) Person {
 
-	return d.Retrieve(n)
+	return db.Retrieve(n)
 }
 
 //Put person to db
